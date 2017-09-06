@@ -5,4 +5,5 @@
 body, html {
   font-family: 'PT Sans', sans-serif;
   overflow-x: hidden; 
+  height: 100vh;
 }

@@ -23,15 +23,13 @@
 
 /deep/ .completer-input {
   width: 120% !important;
+  /*padding-right: 15px;*/
 }
 
 .navbar {
   /*background-color: #00FF87;*/
   background-color: #37003C;
-}
-
-.btn {
-  background-color: #04F5FF;
+  /*border-bottom: 8px solid #E90052;*/
 }
 
 ::-webkit-input-placeholder {

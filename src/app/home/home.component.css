@@ -1,3 +1,27 @@
-.container {
+
+.seperator {
   border-bottom: 5px solid lightgrey;
+}
+
+.header {
+  height: 3.2rem;
+  background-color: #00FF87;
+  border-top: 6px solid #37003C;
+  padding-top: 0px;
+  width: 95%;
+  margin: 0px auto;
+}
+
+.header p {
+  color: #37003C;
+  font-size: 20px;
+  line-height: 2.2;
+}
+
+.charts {
+  width: 95%;
+  margin: 0 auto;
+  border-left: 2px solid #E1E1E1;
+  border-right: 2px solid #E1E1E1;
+  border-bottom: 2px solid #E1E1E1;
 }

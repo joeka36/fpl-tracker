@@ -1,0 +1,10 @@
+p {
+  text-align: center;
+  font-size: 19px;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+
+canvas {
+  margin-bottom: 12px;
+}

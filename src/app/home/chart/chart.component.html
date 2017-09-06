@@ -1,3 +1,10 @@
-<p>
-  chart works!
-</p>
+<div class="block" style="display: block">
+  <strong><p>Sadio Mane</p></strong>
+  <canvas baseChart
+          [data]="pieChartData"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType"
+          [colors]="color"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+</div>
