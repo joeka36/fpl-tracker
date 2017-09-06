@@ -2,34 +2,34 @@ export class Player {
   name: string;
   squad_number: number;
   cost: number;
-  selected_by_percent: string;
-  form: string;
+  selected_by_percent: number;
+  form: number;
   transfer_out_event: number;
   transfer_in_event: number;
   total_points: number;
   event_points: number;
-  ppg: string;
+  ppg: number;
   goals_scored: number;
   assists: number;
   clean_sheets: number;
   goals_conceded: number;
-  ep_this: string;
-  ep_next: string;
-  influence: string;
-  creativity: string;
-  threat: string;
-  ict_index: string;
+  ep_this: number;
+  ep_next: number;
+  influence: number;
+  creativity: number;
+  threat: number;
+  ict_index: number;
   season_points: number[];
   season_name: string[];
   past_fixtures_points: number[];
   fixtures: string[];
 
-  constructor(name:string, num:number, cost:number, select: string,
-              form:string, out_transfer:number, in_transfer:number,
-              total:number, event:number, ppg:string, goal:number,
-              assists:number, clean:number, conceded:number, ep_this:string,
-              ep_next:string, influence:string, creativity:string,
-              threat:string, ict:string, points:number[], names:string[],
+  constructor(name:string, num:number, cost:number, select: number,
+              form:number, out_transfer:number, in_transfer:number,
+              total:number, event:number, ppg:number, goal:number,
+              assists:number, clean:number, conceded:number, ep_this:number,
+              ep_next:number, influence:number, creativity:number,
+              threat:number, ict:number, points:number[], names:string[],
               past:number[], fixtures:string[]) {
 
     this.name = name;

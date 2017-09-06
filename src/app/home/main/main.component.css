@@ -1,0 +1,44 @@
+.header {
+  height: 2.5rem;
+}
+
+p {
+  line-height: 2.2;
+  font-size: 20px;
+}
+
+/*.statistic {
+  border-right: 4px solid #E90052;
+  border-left: 4px solid #E90052;
+}*/
+
+img {
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+  display: block;
+}
+
+.name {
+  height: 40px;
+}
+
+.info {
+  border-bottom: 0px;
+  height: 2.5rem;
+}
+
+.info p {
+  border-bottom: 0px;
+}
+
+.basic, .fantasy{
+  border-top: 4px solid #E90052;
+}
+
+.ep {
+  font-size: 14rem;
+  line-height: 1.3;
+/*  margin-left: 15px;*/
+  text-align: center;
+}

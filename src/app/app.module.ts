@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { PlayerComponent } from './player/player.component';
 import { ErrorComponent } from './error/error.component';
+import { MainComponent } from './home/main/main.component';
+import { ChartComponent } from './home/chart/chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     PlayerComponent,
-    ErrorComponent
+    ErrorComponent,
+    MainComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,

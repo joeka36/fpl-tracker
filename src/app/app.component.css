@@ -15,14 +15,14 @@
 }
 
 /deep/ .completer-dropdown {
-    width: 25.2% !important;
+    width: 23.3% !important;
 /*    overflow-y: auto;
     overflow-x: hidden;
     height: 10rem;*/
 }
 
 /deep/ .completer-input {
-  width: 130% !important;
+  width: 120% !important;
 }
 
 .navbar {
