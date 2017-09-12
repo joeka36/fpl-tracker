@@ -1,3 +1,40 @@
+<div class="row info-1">
+  <div class="col-lg-4 name-1" id="tile">
+    <div class="container">
+      <strong><p>{{ bestPlayer.name }}</p></strong>
+    </div>
+  </div>
+  <div class="col-lg-4 ppg-1" id="tile">
+    <div class="container">
+      <strong><p>{{ bestPlayer.ppg }}</p></strong>
+    </div>
+  </div>
+  <div class="col-lg-4 ep-1" id="tile">
+    <div class="container">
+      <strong><p>PREDICTED POINTS</p></strong>
+    </div>
+  </div>
+</div>
+<div class="row info-1">
+  <div class="col-lg-4">
+    <div class="container">
+      <img [src]="bestPlayer.img_ref">
+    </div>
+  </div>
+  <div class="col-lg-4 ppg-2" id="tile">
+    <div class="container">
+      <strong><p>PPG</p></strong>
+    </div>
+  </div>
+  <div class="col-lg-4 ep-2" id="tile">
+    <div class="container">
+      <strong><p>{{ bestPlayer.ep_this }}</p></strong>
+    </div>
+  </div>
+</div>
+
+<br>
+
 <div class="row container header">
   <!-- <div class="container"> -->
     <strong><p>TOP PREDICTED PLAYER</p></strong>
@@ -5,15 +42,15 @@
 </div>
 <div class="row content">
     <div class="col-lg-4 col-12 side-left">
-      <img src="https://platform-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p92217.png">
+      <img [src]="bestPlayer.img_ref">
     </div>
     <div class="col-lg-4 col-12 statistic">
       <div class="row name">
         <div class="col-lg-8 col-8">
-          <strong><p>Roberto Firmino</p></strong>
+          <strong><p>{{ bestPlayer.name }}</p></strong>
         </div>
         <div class="col-lg-4 col-4">
-          <strong><p>#9</p></strong>
+          <strong><p>#{{ bestPlayer.squad_number }}</p></strong>
         </div>
       </div>
       <div class="row info basic">
@@ -21,7 +58,7 @@
           <p>Club</p>
         </div>
         <div class="col-lg-4 col-4">
-          <strong><p>Liverpool</p></strong>
+          <strong><p> {{ bestPlayer.team }} </p></strong>
         </div>
       </div>
       <div class="row info">
@@ -29,7 +66,7 @@
           <p class="">Position</p>
         </div>
         <div class="col-lg-4 col-4">
-          <strong><p>Forward</p></strong>
+          <strong><p>{{ bestPlayer.position }}</p></strong>
         </div>
       </div>
       <div class="row info fantasy">
@@ -45,7 +82,7 @@
           <p class="">Form</p>
         </div>
         <div class="col-lg-4 col-4">
-          <strong><p>9.0</p></strong>
+          <strong><p>{{ bestPlayer.form }}</p></strong>
         </div>
       </div>
       <div class="row info">
@@ -53,7 +90,7 @@
           <p class="">Total Points</p>
         </div>
         <div class="col-lg-4 col-4">
-          <strong><p>32</p></strong>
+          <strong><p>{{ bestPlayer.total_points }}</p></strong>
         </div>
       </div>
       <div class="row info">
@@ -61,12 +98,12 @@
           <p class="">Last Game Points</p>
         </div>
         <div class="col-lg-4 col-4">
-          <strong><p>12</p></strong>
+          <strong><p>{{ bestPlayer.event_points }}</p></strong>
         </div>
       </div>
     </div>
     <div class="col-lg-4 col-12 side-right">
-      <strong><p class="ep">8.7</p></strong>
+      <strong><p class="ep">{{ bestPlayer.ep_this }}</p></strong>
     </div>
 </div>
 <br>

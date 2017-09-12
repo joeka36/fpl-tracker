@@ -13,6 +13,8 @@ import { MainComponent } from './home/main/main.component';
 import { ChartComponent } from './home/chart/chart.component';
 import { TableComponent } from './home/table/table.component';
 
+import { PlayerService } from './player/player.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,7 @@ import { TableComponent } from './home/table/table.component';
     FormsModule,
     ChartsModule
   ],
-  providers: [],
+  providers: [ PlayerService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

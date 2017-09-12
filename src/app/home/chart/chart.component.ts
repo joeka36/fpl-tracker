@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Player } from '../../player/player.model';
+import { PlayerService } from '../../player/player.service';
 
 @Component({
   selector: 'app-chart',
@@ -7,16 +9,21 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ChartComponent implements OnInit {
 
-  constructor() { }
+  constructor(private playerService:PlayerService) { }
 
   ngOnInit() {
+    this.selectedPlayer = this.playerService.getTopSelectedPlayersByIndex(this.index);
+    this.pieChartData = [this.selectedPlayer.selected_by_percent, (100 - this.selectedPlayer.selected_by_percent)];
   }
 
   @Input() color;
+  @Input() index;
+
+  selectedPlayer:Player;
 
   // Pie
   public pieChartLabels:string[] = ['Selected', 'Not Selected'];
-  public pieChartData:number[] = [34.7, (100 - 34.7)];
+  public pieChartData:number[];
   public pieChartType:string = 'pie';
  
   // events

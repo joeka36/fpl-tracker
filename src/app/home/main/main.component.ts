@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Player } from '../../player/player.model';
+import { PlayerService } from '../../player/player.service';
 
 @Component({
   selector: 'app-main',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
+  bestPlayer:Player;
 
-  constructor() { }
+  constructor(private playerService:PlayerService) { }
 
   ngOnInit() {
+    this.bestPlayer = this.playerService.getBestPlayer();
+    console.log(this.bestPlayer);
   }
 
 }

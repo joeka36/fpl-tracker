@@ -1,3 +1,21 @@
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <div class="container form-inline">
+    <strong><a class="navbar-brand" [routerLink]="['/']">FPL Tracker</a></strong>
+      <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search"> -->
+      <ng2-completer class="mx-auto"
+                     [(ngModel)]="player"
+                     [datasource]="playersName"
+                     (selected)="onSelected($event)"
+                     (keyup.enter)="onSelected($event)"
+                     [minSearchLength]="0"
+                     [inputClass]="['form-control']"
+                     clearSelected=true
+                     [placeholder]="'Search'">
+                      
+      </ng2-completer>`
+  </div>
+</nav>
+
 <p>
   player works!
 </p>

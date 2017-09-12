@@ -1,0 +1,26 @@
+.form-control {
+  width: 350px;
+}
+
+.navbar-brand {
+  /*color: #37003C;*/
+  color: white;
+  text-decoration: none;
+
+}
+
+.navbar-brand:visited {
+  text-decoration: none; 
+  color: white;
+}
+
+.navbar-brand:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar {
+  /*background-color: #00FF87;*/
+  background-color: #4381C1;
+  /*border-bottom: 8px solid #E90052;*/
+}

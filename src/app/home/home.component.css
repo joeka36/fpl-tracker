@@ -1,3 +1,54 @@
+.jumbotron {
+  height: 100%;
+  background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.20)), url("../../assets/img/stadium.jpg");
+  background-size: 100%;
+  background-position: right 0px bottom 0px;
+  background-repeat: no-repeat;
+  z-index: -1;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom: 0;
+}
+
+/deep/ .completer-dropdown {
+    width: 68.0% !important;
+    opacity: 0.9;
+    margin-left: 14.7%;
+    /*margin: 0 auto;*/
+/*    overflow-y: auto;
+    overflow-x: hidden;
+    height: 8rem;*/
+}
+
+/deep/ .completer-input {
+  width: 70% !important;
+  border: 0 !important;
+  opacity: 0.8;
+  margin: 0 auto;
+  /*padding-right: 15px;*/
+}
+
+.container p {
+  font-size: 4rem; 
+  text-align: center;
+  opacity: 1;
+  z-index: 1;
+  color: white;
+  text-shadow: 2px 2px 3px black;
+}
+
+#name {
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+
+#tagline {
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px 8px black;
+}
 
 .seperator {
   border-bottom: 5px solid lightgrey;
@@ -5,15 +56,30 @@
 
 .header {
   height: 3.2rem;
-  background-color: #00FF87;
-  border-top: 6px solid #37003C;
+  background-color: #54457F;
+  border-top: 6px solid #54457F;
   padding-top: 0px;
   width: 95%;
   margin: 0px auto;
 }
 
+.header-2 {
+  height: 3.2rem;
+  background-color: #D35269;
+  border-top: 6px solid #D35269;
+  padding-top: 0px;
+  width: 95%;
+  margin: 0px auto;
+}
+
+.header-2 p {
+  color: white;
+  font-size: 20px;
+  line-height: 2.2;
+}
+
 .header p {
-  color: #37003C;
+  color: white;
   font-size: 20px;
   line-height: 2.2;
 }
@@ -25,3 +91,15 @@
   border-right: 2px solid #E1E1E1;
   border-bottom: 2px solid #E1E1E1;
 }
+
+.table {
+  width: 95%;
+  margin: 0 auto;
+  border-left: 2px solid #E1E1E1;
+  border-right: 2px solid #E1E1E1;
+  border-bottom: 2px solid #E1E1E1;
+}
+
+/*.side-separator {
+  border-right: 3px solid #37003C;
+}*/

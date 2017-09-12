@@ -1,35 +1,12 @@
-.form-control {
-  width: 350px;
-}
-
-.navbar-brand {
-  /*color: #37003C;*/
+.footer {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #4381C1;
+  text-align: center;
   color: white;
-  text-decoration: none;
-
-}
-
-.navbar-brand:hover {
-  color: white;
-  text-decoration: none;
-}
-
-/deep/ .completer-dropdown {
-    width: 23.3% !important;
-/*    overflow-y: auto;
-    overflow-x: hidden;
-    height: 10rem;*/
-}
-
-/deep/ .completer-input {
-  width: 120% !important;
-  /*padding-right: 15px;*/
-}
-
-.navbar {
-  /*background-color: #00FF87;*/
-  background-color: #37003C;
-  /*border-bottom: 8px solid #E90052;*/
+  font-size: 12px;
 }
 
 ::-webkit-input-placeholder {

@@ -62,6 +62,7 @@ for element in allPlayers["elements"]:
     count = 0
     name = element["first_name"] + " " + element["second_name"]
     position = elementToPositionMapping[element["element_type"]]
+    team = idToClubMapping[element["team_code"]]
     squad_number = element["squad_number"]
     img_ref = PLAYER_IMG + str(element["code"]) + ".png"
     cost = convertToCost(str(element["now_cost"]))
@@ -145,6 +146,7 @@ for element in allPlayers["elements"]:
         newPlayer = {
           "name": name,
           "position": position,
+          "team" : team,
           "squad_number": squad_number,
           "img": img_ref,
           "cost": cost,

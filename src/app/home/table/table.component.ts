@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Player } from '../../player/player.model';
+import { PlayerService } from '../../player/player.service';
 
 @Component({
   selector: 'app-table',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableComponent implements OnInit {
 
-  constructor() { }
+  @Input() transferIn:boolean;
+  transferPlayersIn:Player[] = [];
+  transferPlayersOut:Player[] = [];
+
+  constructor(private playerService:PlayerService) { }
 
   ngOnInit() {
+    this.transferPlayersIn = this.playerService.getTopTransfersIn();
+    this.transferPlayersOut = this.playerService.getTopTransfersOut();
   }
+
 
 }

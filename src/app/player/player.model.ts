@@ -1,6 +1,10 @@
 export class Player {
+  playerID: string;
   name: string;
+  position: string;
+  team: string;
   squad_number: number;
+  img_ref: string;
   cost: number;
   selected_by_percent: number;
   form: number;
@@ -24,16 +28,19 @@ export class Player {
   past_fixtures_points: number[];
   fixtures: string[];
 
-  constructor(name:string, num:number, cost:number, select: number,
-              form:number, out_transfer:number, in_transfer:number,
+  constructor(id:string, name:string, pos:string, team:string, num:number, img:string,
+              cost:number, select: number, form:number, out_transfer:number, in_transfer:number,
               total:number, event:number, ppg:number, goal:number,
               assists:number, clean:number, conceded:number, ep_this:number,
               ep_next:number, influence:number, creativity:number,
               threat:number, ict:number, points:number[], names:string[],
               past:number[], fixtures:string[]) {
-
+    this.playerID = id;
     this.name = name;
+    this.position = pos;
+    this.team = team;
     this.squad_number = num;
+    this.img_ref = img;
     this.cost = cost;
     this.selected_by_percent = select;
     this.form = form;
