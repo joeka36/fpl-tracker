@@ -1,7 +1,7 @@
 <div class="jumbotron">
   <div class="container">
     <p id="name"><strong>FPL TRACKER</strong></p>
-    <p id="tagline">Track your players, and dominate your league</p>
+    <p id="tagline">Track your players, visualize their statistics, and dominate your league</p>
     <br>
     <br>
     <br>
@@ -20,43 +20,11 @@
 </div>
 
 <app-main></app-main>
-<!-- <div class="container seperator">
-</div> -->
-<div class="row container header">
-  <!-- <div class="container"> -->
-    <strong><p>MOST SELECTED PLAYERS</p></strong>
-  <!-- </div> -->
-</div>
-<div class="row charts">
-  <div class="col-lg-4 col-12">
-    <app-chart [color]="chartColorsOne" index=0></app-chart>
-  </div>
-  <div class="col-lg-4 col-12">
-    <app-chart [color]="chartColorsTwo" index=1></app-chart>
-  </div>
-  <div class="col-lg-4 col-12">
-    <app-chart [color]="chartColorsThree" index=2></app-chart>
-  </div>
-</div>
-<br>
-<!-- <div class="container seperator">
-</div> -->
-<div class="row container header-2">
-  <!-- <div class="container"> -->
-    <strong><p>TRANSFER MARKET</p></strong>
-  <!-- </div> -->
-</div>
 
-<div class="row table">
-    <div class="col-lg-6 col-12 side-separator">
-      <br>
-      <strong><p>TOP TRANSFER IN</p></strong>
-      <app-table [transferIn]="true"></app-table>
-    </div>
-    <div class="col-lg-6 col-12">
-      <br>
-      <strong><p>TOP TRANSFER OUT</p></strong>
-      <app-table [transferIn]="false"></app-table>
-    </div>
-</div>
+<br>
+
+<app-chart-container></app-chart-container>
+
+<app-table-container></app-table-container>
+
 <br>

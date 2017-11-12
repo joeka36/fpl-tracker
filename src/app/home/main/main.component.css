@@ -1,3 +1,95 @@
+.intro {
+  text-align: center;
+}
+
+.headline {
+  font-size: 2rem;
+  margin-bottom: 0;
+  margin-top: 4%;
+}
+
+.tagline {
+  font-size: 1rem;
+  line-height: 1.0;
+  color: #777777;
+}
+
+.player-display {
+  background-image: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.40)), url("../../../assets/img/backdrop1.jpg");
+  background-size: 600px 300px;
+  background-position: center;
+  border-right: 5px solid white;
+}
+
+.player-name {
+  border-left: 3px solid black;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.player-name p {
+  padding-top: 75%;
+  line-height: 100%;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.player-position {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+  border-left: 3px solid black;
+}
+
+.player-position p {
+  padding-top: 75%;
+  line-height: 100%;
+  text-align: center;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
+
+.player-ppg {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.player-ppg p {
+  padding-top: 75%;
+  line-height: 100%;
+  text-align: center;
+  font-size: 4rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#ppg{
+  font-size: 1.5rem;
+}
+
+.player-predicted {
+  border-right: 3px solid black;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  border-left: 3px solid black;
+}
+
+.player-predicted p {
+  padding-top: 55%;
+  line-height: 100%;
+  text-align: center;
+  font-size: 5.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#pred {
+  font-size: 1.5rem;
+  padding-top: 10px;
+}
+
 .header {
   height: 3.2rem;
   background-color: #69B8BF;

@@ -62,7 +62,7 @@ export class PlayerService {
       2,
       2,
       5,
-      9.7,
+      10.7,
       12.7,
       150.6,
       90.4,
@@ -80,7 +80,7 @@ export class PlayerService {
       "MD",
       "Liverpool",
       11,
-      "https://platform-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p110979.png",
+      "https://platform-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p118748.png",
       95,
       18.4,
       8.0,
@@ -111,7 +111,7 @@ export class PlayerService {
       "FWD",
       "Liverpool",
       15,
-      "https://platform-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p110979.png",
+      "https://platform-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p40755.png",
       95,
       12.1,
       8.0,
@@ -174,7 +174,11 @@ export class PlayerService {
   }
 
   getPlayerByID(id:string) {
-
+    //return this.players[id];
+    for (var i = this.players.length - 1; i >= 0; i--) {
+      if(this.players[i].playerID === id)
+        return this.players[i];
+    }
   }
 
   getPlayerByIndex(index: number){

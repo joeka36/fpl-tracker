@@ -1,5 +1,5 @@
 <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-  <div class="container form-inline">
+  <div class="navbar-container container form-inline">
     <strong><a class="navbar-brand" [routerLink]="['/']">FPL Tracker</a></strong>
       <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search"> -->
       <ng2-completer class="mx-auto"
@@ -16,6 +16,13 @@
   </div>
 </nav>
 
-<p>
-  player works!
-</p>
+  <app-player-summary></app-player-summary>
+
+<div class="row predicted">
+  <div class="col-4">
+    <app-player-radar [index]="playerID"></app-player-radar>
+  </div>
+  <div class="col-8">
+    <app-prediction [index]="playerID"></app-prediction>
+  </div>
+</div>

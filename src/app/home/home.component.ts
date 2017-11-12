@@ -33,19 +33,4 @@ export class HomeComponent implements OnInit {
         this.router.navigate(['player', this.searchPlayer.playerID]);
       } 
   }
-
-  public chartColorsOne: any[] = [
-      { 
-        backgroundColor:["#E90052", "#37003C"] 
-      }];
-
-  public chartColorsTwo: any[] = [
-      { 
-        backgroundColor:["#04F5FF", "#E90052"] 
-      }];
-
-  public chartColorsThree: any[] = [
-      { 
-        backgroundColor:["#37003C", "#04F5FF"] 
-      }];
 }

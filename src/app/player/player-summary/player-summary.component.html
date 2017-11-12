@@ -1,0 +1,69 @@
+<div class="row container header">
+    <strong><p>{{ selectedPlayer.name | uppercase }} #{{ selectedPlayer.squad_number }}</p></strong>
+</div>
+<div class="row content">
+    <div class="col-lg-4 col-12 side-left">
+      <img [src]="selectedPlayer.img_ref">
+    </div>
+    <div class="col-lg-4 col-12 statistic">
+      <div class="row name">
+        <div class="col-lg-8 col-8">
+          <strong><p>{{ selectedPlayer.name }}</p></strong>
+        </div>
+        <div class="col-lg-4 col-4">
+          <strong><p>#{{ selectedPlayer.squad_number }}</p></strong>
+        </div>
+      </div>
+      <div class="row info basic">
+        <div class="col-lg-8 col-8">
+          <p>Club</p>
+        </div>
+        <div class="col-lg-4 col-4">
+          <strong><p> {{ selectedPlayer.team }} </p></strong>
+        </div>
+      </div>
+      <div class="row info">
+        <div class="col-lg-8 col-8">
+          <p class="">Position</p>
+        </div>
+        <div class="col-lg-4 col-4">
+          <strong><p>{{ selectedPlayer.position }}</p></strong>
+        </div>
+      </div>
+      <div class="row info fantasy">
+        <div class="col-lg-8 col-8">
+          <p class="">PPG</p>
+        </div>
+        <div class="col-lg-4 col-4">
+          <strong><p>8.2</p></strong>
+        </div>
+      </div>
+      <div class="row info">
+        <div class="col-lg-8 col-8">
+          <p class="">Form</p>
+        </div>
+        <div class="col-lg-4 col-4">
+          <strong><p>{{ selectedPlayer.form }}</p></strong>
+        </div>
+      </div>
+      <div class="row info">
+        <div class="col-lg-8 col-8">
+          <p class="">Total Points</p>
+        </div>
+        <div class="col-lg-4 col-4">
+          <strong><p>{{ selectedPlayer.total_points }}</p></strong>
+        </div>
+      </div>
+      <div class="row info">
+        <div class="col-lg-8 col-8">
+          <p class="">Last Game Points</p>
+        </div>
+        <div class="col-lg-4 col-4">
+          <strong><p>{{ selectedPlayer.event_points }}</p></strong>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-12 side-right">
+      <strong><p class="ep">{{ selectedPlayer.ep_this }}</p></strong>
+    </div>
+</div>

@@ -1,4 +1,43 @@
-<div class="row info-1">
+<div class="row">
+  <div class="col-12">
+    <div class="container intro">
+      <strong><p class="headline">TOP PREDICTED PLAYER</p></strong>
+      <p class="tagline">THE VERY BEST OF THE LEAGUE FOR YOUR UPCOMING FIXTURE</p>
+      <hr>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="container">
+  <div class="row">
+  <div class="col-lg-4 player-display">
+    <img [src]="bestPlayer.img_ref">
+  </div>
+  <div class="col-lg-2 player-name">
+     <div class="container">
+      <p>{{ bestPlayer.name }}</p>
+    </div>
+  </div>
+  <div class="col-lg-2 player-position">
+    <div class="container">
+      <p>{{ bestPlayer.position }}</p>
+    </div>
+  </div>
+  <div class="col-lg-2 player-ppg">
+    <div class="container">
+      <p>{{ bestPlayer.ppg }}<span id="ppg">ppg</span></p>
+    </div>
+  </div>
+  <div class="col-lg-2 player-predicted">
+    <p>{{ bestPlayer.ep_this }}</p>
+    <p id="pred">PREDICTED POINTS</p>
+  </div>
+</div>
+</div>
+
+<!-- <div class="row info-1">
   <div class="col-lg-4 name-1" id="tile">
     <div class="container">
       <strong><p>{{ bestPlayer.name }}</p></strong>
@@ -33,12 +72,12 @@
   </div>
 </div>
 
-<br>
+<br> -->
 
+<br>
+<!-- 
 <div class="row container header">
-  <!-- <div class="container"> -->
     <strong><p>TOP PREDICTED PLAYER</p></strong>
-  <!-- </div> -->
 </div>
 <div class="row content">
     <div class="col-lg-4 col-12 side-left">
@@ -105,5 +144,5 @@
     <div class="col-lg-4 col-12 side-right">
       <strong><p class="ep">{{ bestPlayer.ep_this }}</p></strong>
     </div>
-</div>
+</div> -->
 <br>

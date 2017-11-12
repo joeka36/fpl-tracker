@@ -12,7 +12,7 @@
   margin-bottom: 0;
 }
 
-/deep/ .completer-dropdown {
+:host >>> .completer-dropdown {
     width: 68.0% !important;
     opacity: 0.9;
     margin-left: 14.7%;
@@ -22,12 +22,16 @@
     height: 8rem;*/
 }
 
-/deep/ .completer-input {
+:host >>> .completer-input {
   width: 70% !important;
-  border: 0 !important;
+  border: 0;
   opacity: 0.8;
   margin: 0 auto;
   /*padding-right: 15px;*/
+}
+
+:host >>> .completer-selected-row {
+  .width: 70% !important;
 }
 
 .container p {
@@ -48,6 +52,22 @@
   font-size: 2rem;
   color: white;
   text-shadow: 2px 2px 8px black;
+}
+
+.intro {
+  text-align: center;
+}
+
+.headline {
+  font-size: 2rem;
+  margin-bottom: 0;
+  margin-top: 4%;
+}
+
+.tag {
+  font-size: 1rem;
+  line-height: 1.0;
+  color: #777777;
 }
 
 .seperator {
@@ -85,14 +105,6 @@
 }
 
 .charts {
-  width: 95%;
-  margin: 0 auto;
-  border-left: 2px solid #E1E1E1;
-  border-right: 2px solid #E1E1E1;
-  border-bottom: 2px solid #E1E1E1;
-}
-
-.table {
   width: 95%;
   margin: 0 auto;
   border-left: 2px solid #E1E1E1;

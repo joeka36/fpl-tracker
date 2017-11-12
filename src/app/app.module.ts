@@ -14,6 +14,11 @@ import { ChartComponent } from './home/chart/chart.component';
 import { TableComponent } from './home/table/table.component';
 
 import { PlayerService } from './player/player.service';
+import { ChartContainerComponent } from './home/chart-container/chart-container.component';
+import { TableContainerComponent } from './home/table-container/table-container.component';
+import { PlayerSummaryComponent } from './player/player-summary/player-summary.component';
+import { PredictionComponent } from './player/prediction/prediction.component';
+import { PlayerRadarComponent } from './player/player-radar/player-radar.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,12 @@ import { PlayerService } from './player/player.service';
     ErrorComponent,
     MainComponent,
     ChartComponent,
-    TableComponent
+    TableComponent,
+    ChartContainerComponent,
+    TableContainerComponent,
+    PlayerSummaryComponent,
+    PredictionComponent,
+    PlayerRadarComponent
   ],
   imports: [
     BrowserModule,

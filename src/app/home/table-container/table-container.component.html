@@ -1,0 +1,27 @@
+<div class="tables">
+  <div class="row">
+    <div class="col-12">
+      <div class="container intro">
+        <strong><p class="headline">TRANSFER MARKET</p></strong>
+        <p class="tagline">TRACK ACTIVITIES OF USERS IN THE MARKET</p>
+        <hr>
+      </div>
+    </div>
+  </div>
+
+  <div class="row table">
+      <div class="col-lg-6 col-12 side-separator">
+        <br>
+        <strong><p>TOP TRANSFER IN</p></strong>
+        <app-table [transferIn]="true"></app-table>
+      </div>
+      <div class="col-lg-6 col-12">
+        <br>
+        <strong><p>TOP TRANSFER OUT</p></strong>
+        <app-table [transferIn]="false"></app-table>
+      </div>
+  </div>
+</div>
+
+<br>
+  
