@@ -19,7 +19,7 @@ export class PlayerRadarComponent implements OnInit {
       this.selectedPlayer.creativity, this.selectedPlayer.threat,
       this.selectedPlayer.ict_index
     ], label: 'Player Info'}];
-    this.radarChartLabels = ['Influence', 'Creativity', 'Threat', 'ICT Index'];
+    this.radarChartLabels = ['Influence', 'Creativity', 'Threat', 'ICT Average'];
     console.log(this.radarChartData);
     console.log(this.radarChartLabels);
   }
@@ -30,6 +30,14 @@ export class PlayerRadarComponent implements OnInit {
   public radarChartLabels:string[];
   public radarChartData:any;
   public radarChartType:string = 'radar';
+  public color:any[] = [
+    {
+      backgroundColor: ["#75a9ff"],
+      borderColor: ["#5998ff"],
+      pointBackgroundColor: '#5998ff',
+      pointBorderColor: '#fff',
+    }
+  ];
  
   // events
   public chartClicked(e:any):void {

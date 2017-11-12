@@ -18,11 +18,36 @@
 
   <app-player-summary></app-player-summary>
 
-<div class="row predicted">
-  <div class="col-4">
-    <app-player-radar [index]="playerID"></app-player-radar>
+<div class= "container">
+  <div class="row predicted">
+    <div class="col-12">
+      <p style="font-size: 27px;"> CURRENT FORM </p>
+      <app-prediction [index]="playerID" [option]=0 [color]="chartColorsOne">
+      </app-prediction>
+    </div>
   </div>
-  <div class="col-8">
-    <app-prediction [index]="playerID"></app-prediction>
+</div>
+
+<hr>
+
+<div class = "container">
+  <div class="row">
+    <div class="col-lg-4 col-xs-12">
+      <p style="font-size: 27px; text-align: center;"> ICT INDEX </p>
+      <app-player-radar [index]="playerID"></app-player-radar>
+    </div>
+    <div class="col-lg-8 col-xs-12">
+      <p style="font-size: 27px; text-align: center;"> PAST FORM </p>
+      <app-prediction [index]="playerID" [option]=1 [color]="chartColorsTwo">
+      </app-prediction>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="container">
+  <div class="row">
+    
   </div>
 </div>

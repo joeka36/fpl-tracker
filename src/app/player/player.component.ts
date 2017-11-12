@@ -20,6 +20,22 @@ export class PlayerComponent implements OnInit {
   protected playersName:string[];
   protected selectedPlayer: Player;
   protected playerID: string;
+
+  public chartColorsOne: any[] = [
+      { 
+        backgroundColor:"#FFC1CE",
+        borderColor: "#FF6384",
+        pointBackgroundColor: "#FF6384",
+        pointBorderColor: "#FFFFFF" 
+      }];
+
+  public chartColorsTwo: any[] = [
+      { 
+        backgroundColor:"#ffef7c",
+        borderColor: "#ffea5e",
+        pointBackgroundColor: "#ffea5e",
+        pointBorderColor: "#FFFFFF" 
+      }];
   // protected captains = ['James T. Kirk', 'Benjamin Sisko', 'Jean-Luc Picard', 'Spock', 'Jonathan Archer', 'Hikaru Sulu', 'Christopher Pike', 'Rachel Garrett' ];
 
   constructor(private route: ActivatedRoute, private router: Router, private playerService:PlayerService) {}

@@ -14,14 +14,26 @@ export class PredictionComponent implements OnInit {
 
   ngOnInit() {
     this.selectedPlayer = this.playerService.getPlayerByIndex(this.index - 1);
-    this.pastPoints = this.selectedPlayer.past_fixtures_points;
-    this.pastPoints.push(this.selectedPlayer.ep_this);
-    this.fixtures = this.selectedPlayer.fixtures;
-    this.lineChartData = [{data: this.pastPoints, label: 'Fantasy Points'}];
-    this.lineChartLabels = this.fixtures;
+
+    if(this.option == 0) {
+      this.pastPoints = this.selectedPlayer.past_fixtures_points;
+      this.pastPoints.push(this.selectedPlayer.ep_this);
+      this.fixtures = this.selectedPlayer.fixtures;
+      this.lineChartData = [{data: this.pastPoints, label: 'Fantasy Points'}];
+      this.lineChartLabels = this.fixtures;
+    }
+    
+    else {
+      this.pastPoints = this.selectedPlayer.season_points;
+      this.fixtures = this.selectedPlayer.season_name;
+      this.lineChartData = [{data:this.pastPoints, label: 'Fantasy Points'}];
+      this.lineChartLabels = this.fixtures;
+    } 
   }
 
   @Input() index;
+  @Input() option;
+  @Input() color;
 
   selectedPlayer:Player;
   pastPoints:Number[];
