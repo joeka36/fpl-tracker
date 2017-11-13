@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-lg-4 col-12">
+    <p style="font-size: 27px; text-align: center;"> SELECTION RATIO </p>
+    <app-player-pie-chart [playerID]="playerID" [color]="chartColorsOne" [type]=0></app-player-pie-chart>
+  </div>
+  <div class="col-lg-4 col-12">
+    <p style="font-size: 27px; text-align: center;"> TRANSFER IN/OUT RATIO </p>
+    <app-player-pie-chart [playerID]="playerID" [color]="chartColorsTwo" [type]=1></app-player-pie-chart>
+  </div>
+  <div class="col-lg-4 col-12">
+    <p style="font-size: 27px; text-align: center;"> GOAL TO ASSIST RATIO </p>
+    <app-player-pie-chart [playerID]="playerID" [color]="chartColorsThree" [type]=2></app-player-pie-chart>
+  </div>
+</div>
+
+<br>

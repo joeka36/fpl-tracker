@@ -19,6 +19,8 @@ import { TableContainerComponent } from './home/table-container/table-container.
 import { PlayerSummaryComponent } from './player/player-summary/player-summary.component';
 import { PredictionComponent } from './player/prediction/prediction.component';
 import { PlayerRadarComponent } from './player/player-radar/player-radar.component';
+import { PlayerChartContainerComponent } from './player/player-chart-container/player-chart-container.component';
+import { PlayerPieChartComponent } from './player/player-pie-chart/player-pie-chart.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { PlayerRadarComponent } from './player/player-radar/player-radar.compone
     TableContainerComponent,
     PlayerSummaryComponent,
     PredictionComponent,
-    PlayerRadarComponent
+    PlayerRadarComponent,
+    PlayerChartContainerComponent,
+    PlayerPieChartComponent
   ],
   imports: [
     BrowserModule,
