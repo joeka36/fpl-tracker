@@ -19,26 +19,26 @@ PLAYER_IMG = "https://platform-static-files.s3.amazonaws.com/premierleague/photo
 #Mapping between team ID and team name
 
 idToClubMapping = {
-    1: ["Arsenal", "ARS"],
-    2: ["Bournemouth", "BOU"],
-    3: ["Brighton", "BHA"],
-    4: ["Burnley", "BUR"],
-    5: ["Chelsea", "CHE"],
-    6: ["Crystal Palace", "CRY"],
-    7: ["Everton", "EVE"],
-    8: ["Huddersfield", "HUD"],
-    9: ["Leicester", "LEI"],
-    10: ["Liverpool", "LIV"],
-    11: ["Manchester City", "MCI"],
-    12: ["Manchester United", "MUN"],
-    13: ["Newcastle", "NEW"],
-    14: ["Southampton", "SOU"],
-    15: ["Stoke", "STK"],
-    16: ["Swansea City", "SWA"],
-    17: ["Spurs", "TOT"],
-    18: ["Watford", "WAT"],
-    19: ["West Brom", "WBA"],
-    20: ["West Ham United", "WHU"]
+    3: ["Arsenal", "ARS"],
+    91: ["Bournemouth", "BOU"],
+    36: ["Brighton", "BHA"],
+    90: ["Burnley", "BUR"],
+    8: ["Chelsea", "CHE"],
+    31: ["Crystal Palace", "CRY"],
+    11: ["Everton", "EVE"],
+    38: ["Huddersfield", "HUD"],
+    13: ["Leicester", "LEI"],
+    14: ["Liverpool", "LIV"],
+    43: ["Manchester City", "MCI"],
+    1: ["Manchester United", "MUN"],
+    4: ["Newcastle", "NEW"],
+    20: ["Southampton", "SOU"],
+    110: ["Stoke", "STK"],
+    80: ["Swansea City", "SWA"],
+    6: ["Spurs", "TOT"],
+    57: ["Watford", "WAT"],
+    35: ["West Brom", "WBA"],
+    21: ["West Ham United", "WHU"]
 }
 
 elementToPositionMapping = {
@@ -62,6 +62,7 @@ for element in allPlayers["elements"]:
     count = 0
     name = element["first_name"] + " " + element["second_name"]
     position = elementToPositionMapping[element["element_type"]]
+    print(element["team_code"])
     team = idToClubMapping[element["team_code"]]
     squad_number = element["squad_number"]
     img_ref = PLAYER_IMG + str(element["code"]) + ".png"
