@@ -41,6 +41,29 @@ idToClubMapping = {
     21: ["West Ham United", "WHU"]
 }
 
+playerToClubMapping = {
+    1: ["Arsenal", "ARS"],
+    2: ["Bournemouth", "BOU"],
+    3: ["Brighton", "BHA"],
+    4: ["Burnley", "BUR"],
+    5: ["Chelsea", "CHE"],
+    6: ["Crystal Palace", "CRY"],
+    7: ["Everton", "EVE"],
+    8: ["Huddersfield", "HUD"],
+    9: ["Leicester", "LEI"],
+    10: ["Liverpool", "LIV"],
+    11: ["Manchester City", "MCI"],
+    12: ["Manchester United", "MUN"],
+    13: ["Newcastle", "NEW"],
+    14: ["Southampton", "SOU"],
+    15: ["Stoke", "STK"],
+    16: ["Swansea City", "SWA"],
+    17: ["Spurs", "TOT"],
+    18: ["Watford", "WAT"],
+    19: ["West Brom", "WBA"],
+    20: ["West Ham United", "WHU"]
+}
+
 elementToPositionMapping = {
     1: "Goalkeeper",
     2: "Defender",
@@ -62,7 +85,6 @@ for element in allPlayers["elements"]:
     count = 0
     name = element["first_name"] + " " + element["second_name"]
     position = elementToPositionMapping[element["element_type"]]
-    print(element["team_code"])
     team = idToClubMapping[element["team_code"]]
     squad_number = element["squad_number"]
     img_ref = PLAYER_IMG + str(element["code"]) + ".png"
@@ -100,7 +122,8 @@ for element in allPlayers["elements"]:
 
     for games in playerInfo["history_summary"]:
         past_fixtures_points.append(games["total_points"])
-        clubName = idToClubMapping[games["opponent_team"]]
+        clubName = playerToClubMapping[games["opponent_team"]]
+        # print(idToClubMapping[games["opponent_team"]])
         fixtures.append(clubName[1])
 
     for fixture in playerInfo['fixtures']:
