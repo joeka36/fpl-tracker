@@ -1,4 +1,4 @@
-const express = require("expresss");
+const express = require("express");
 var bodyParser  = require('body-parser');
 var path        = require('path');
 var http        = require('http');
@@ -6,7 +6,7 @@ var mongoose    = require('mongoose');
 
 const app = express();
 
-ar appRoute = require('./server/routes/app');
+var appRoute = require('./server/routes/app');
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
