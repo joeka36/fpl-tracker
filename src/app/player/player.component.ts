@@ -48,8 +48,20 @@ export class PlayerComponent implements OnInit {
         }
       );
 
-    this.playersName = this.playerService.getPlayersNameArray();
-    this.selectedPlayer = this.playerService.getPlayerByID(this.playerID);
+    this.playerService.getPlayersNameArray()
+    .subscribe(
+        (playerNames: string[]) => {
+          this.playersName = playerNames;
+        }
+      );
+
+    this.playerService.getPlayerByID(this.playerID)
+      .subscribe(
+        (player: Player) => {
+          this.selectedPlayer = player;
+        }
+       );
+    // this.selectedPlayer = this.playerService.getPlayerByID(this.playerID);
     // console.log(this.playersName[1]);
   }
 
@@ -61,14 +73,32 @@ export class PlayerComponent implements OnInit {
         }
       );
 
-    this.playersName = this.playerService.getPlayersNameArray();
-    this.selectedPlayer = this.playerService.getPlayerByID(this.playerID);
+    this.playerService.getPlayersNameArray()
+    .subscribe(
+        (playerNames: string[]) => {
+          this.playersName = playerNames;
+        }
+      );
+
+    this.playerService.getPlayerByID(this.playerID)
+      .subscribe(
+        (player: Player) => {
+          this.selectedPlayer = player;
+        }
+       );
+      
+    // this.selectedPlayer = this.playerService.getPlayerByID(this.playerID);
   }
 
   public onSelected(selected: CompleterItem) {
     if (selected) {
         // console.log(selected.title);
-        this.searchPlayer = this.playerService.getPlayerByName(selected.title);
+        this.playerService.getPlayerByName(selected.title)
+        .subscribe(
+          (searchPlayer: Player) => {
+            this.searchPlayer = searchPlayer;
+          }
+         );
         // console.log(this.searchPlayer.playerID);
         this.router.navigate(['player', this.searchPlayer.playerID]);
       } 

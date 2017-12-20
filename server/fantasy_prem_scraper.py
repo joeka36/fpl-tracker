@@ -3,6 +3,7 @@ import json
 import csv
 import pymongo
 from pymongo import MongoClient
+from tqdm import *
 
 def convertToCost(cost):
     tempCost = cost + cost[len(str(cost)) - 1]
@@ -81,7 +82,7 @@ response = requests.get(FPL_ALL)
 allPlayers = response.json()
 
 #For each players summary, get comprehensive data
-for element in allPlayers["elements"]:
+for element in tqdm(allPlayers["elements"]):
     count = 0
     name = element["first_name"] + " " + element["second_name"]
     position = elementToPositionMapping[element["element_type"]]

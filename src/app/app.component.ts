@@ -22,14 +22,24 @@ export class AppComponent {
   constructor(private route: ActivatedRoute, private router: Router, private playerService:PlayerService) {}
 
   ngOnInit(){
-    this.playersName = this.playerService.getPlayersNameArray();
+    this.playerService.getPlayersNameArray()
+    .subscribe(
+        (playerNames: string[]) => {
+          this.playersName = playerNames;
+        }
+      );
     // console.log(this.playersName[1]);
   }
 
   public onSelected(selected: CompleterItem) {
     if (selected) {
         // console.log(selected.title);
-        this.searchPlayer = this.playerService.getPlayerByName(selected.title);
+        this.playerService.getPlayerByName(selected.title)
+        .subscribe(
+          (searchPlayer: Player) => {
+            this.searchPlayer = searchPlayer;
+          }
+         );
         // console.log(this.searchPlayer.playerID);
         this.router.navigate(['player', this.searchPlayer.playerID]);
       } 
