@@ -22,7 +22,14 @@ export class PlayerSummaryComponent implements OnInit {
           this.playerID = params['id'];
         }
       );
-    this.selectedPlayer = this.playerService.getPlayerByID(this.playerID);
+
+    this.playerService.getPlayerByID(this.playerID)
+      .subscribe(
+        (player: Player) => {
+          this.selectedPlayer = player;
+        }
+       );
+    // this.selectedPlayer = this.playerService.getPlayerByID(this.playerID);
     // console.log(this.playersName[1]);
   }
 
@@ -33,6 +40,13 @@ export class PlayerSummaryComponent implements OnInit {
           this.playerID = params['id'];
         }
       );
-    this.selectedPlayer = this.playerService.getPlayerByID(this.playerID);
+
+    this.playerService.getPlayerByID(this.playerID)
+      .subscribe(
+        (player: Player) => {
+          this.selectedPlayer = player;
+        }
+       );
+    // this.selectedPlayer = this.playerService.getPlayerByID(this.playerID);
   }
 }

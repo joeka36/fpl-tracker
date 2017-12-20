@@ -13,7 +13,13 @@ export class MainComponent implements OnInit {
   constructor(private playerService:PlayerService) { }
 
   ngOnInit() {
-    this.bestPlayer = this.playerService.getBestPlayer();
+    this.playerService.getBestPlayer()
+      .subscribe(
+        (bestPlayer:Player) => {
+          this.bestPlayer = bestPlayer;
+        }
+      );
+    // this.bestPlayer = this.playerService.getBestPlayer();
     console.log(this.bestPlayer);
   }
 

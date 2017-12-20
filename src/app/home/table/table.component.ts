@@ -16,8 +16,21 @@ export class TableComponent implements OnInit {
   constructor(private playerService:PlayerService) { }
 
   ngOnInit() {
-    this.transferPlayersIn = this.playerService.getTopTransfersIn();
-    this.transferPlayersOut = this.playerService.getTopTransfersOut();
+    this.playerService.getTopTransfersIn()
+      .subscribe(
+        (topPlayersIn: Player[]) => {
+          this.transferPlayersIn = topPlayersIn;
+        }
+      );
+
+    this.playerService.getTopTransfersOut()
+      .subscribe(
+        (topPlayersOut: Player[]) => {
+          this.transferPlayersOut = topPlayersOut;
+        }
+      );
+    // this.transferPlayersIn = this.playerService.getTopTransfersIn();
+    // this.transferPlayersOut = this.playerService.getTopTransfersOut();
   }
 
 

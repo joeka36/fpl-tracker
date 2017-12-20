@@ -12,7 +12,13 @@ export class ChartComponent implements OnInit {
   constructor(private playerService:PlayerService) { }
 
   ngOnInit() {
-    this.selectedPlayer = this.playerService.getTopSelectedPlayersByIndex(this.index);
+    this.playerService.getTopSelectedPlayersByIndex(this.index)
+      .subscribe(
+        (selectedPlayer: Player) => {
+          this.selectedPlayer = selectedPlayer;
+        }
+      );
+    // this.selectedPlayer = this.playerService.getTopSelectedPlayersByIndex(this.index);
     this.pieChartData = [this.selectedPlayer.selected_by_percent, (100 - this.selectedPlayer.selected_by_percent)];
   }
 
