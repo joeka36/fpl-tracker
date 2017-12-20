@@ -25,6 +25,7 @@ export class AppComponent {
     this.playerService.getPlayersNameArray()
     .subscribe(
         (playerNames: string[]) => {
+          // console.log(playerNames);
           this.playersName = playerNames;
         }
       );

@@ -30,7 +30,7 @@
 .player-name p {
   padding-top: 75%;
   line-height: 100%;
-  font-size: 3rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   text-align: center;
 }
@@ -46,7 +46,7 @@
   padding-top: 75%;
   line-height: 100%;
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
 }
 
@@ -56,10 +56,10 @@
 }
 
 .player-ppg p {
-  padding-top: 75%;
+  padding-top: 55%;
   line-height: 100%;
   text-align: center;
-  font-size: 4rem;
+  font-size: 4.3rem;
   text-transform: uppercase;
   text-align: center;
 }
@@ -76,7 +76,7 @@
 }
 
 .player-predicted p {
-  padding-top: 55%;
+  padding-top: 40%;
   line-height: 100%;
   text-align: center;
   font-size: 5.5rem;

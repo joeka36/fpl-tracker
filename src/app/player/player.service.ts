@@ -23,13 +23,13 @@ export class PlayerService {
         let transformedPlayer: Player;
 
         transformedPlayer = new Player(player._id, player.name, player.position,
-            player.team, player.squad_number, player.img, player.cost,
-            player.selected_by_percent, player.form, player.transfer_out_event,
-            player.transfer_in_event, player.total_points, player.event_points,
-            player.ppg, player.goals_scored, player.assists, player.clean_sheets,
-            player.goals_conceded, player.ep_this, player.ep_next, player.influence,
-            player.creativity, player.ep.threat, player.ict_index, player.season_points,
-            player.season_name, player.past_fixtures_points, player.fixtures);
+          player.team, player.squad_number, player.img, player.cost,
+          player.selected_by_percent, player.form, player.transfer_out_event,
+          player.transfer_in_event, player.total_points, player.event_points,
+          player.ppg, player.goals_scored, player.assists, player.clean_sheets,
+          player.goals_conceded, player.ep_this, player.ep_next, player.influence,
+          player.creativity, player.threat, player.ict_index, player.season_points,
+          player.season_name, player.past_fixtures_points, player.fixtures);
 
         return transformedPlayer;
       })
@@ -48,19 +48,22 @@ export class PlayerService {
   getBestPlayer() {
     return this.http.get('http://localhost:3000/api')
       .map((response: Response) => {
-        const topPlayer = response.json().topPlayer;
-        let transformedTopPlayer: Player;
-        let player = topPlayer;
+        const player = response.json().topPlayer[0];
 
+        // console.log(player.name);
+        let transformedTopPlayer: Player;
+        
         transformedTopPlayer = new Player(player._id, player.name, player.position,
           player.team, player.squad_number, player.img, player.cost,
           player.selected_by_percent, player.form, player.transfer_out_event,
           player.transfer_in_event, player.total_points, player.event_points,
           player.ppg, player.goals_scored, player.assists, player.clean_sheets,
           player.goals_conceded, player.ep_this, player.ep_next, player.influence,
-          player.creativity, player.ep.threat, player.ict_index, player.season_points,
+          player.creativity, player.threat, player.ict_index, player.season_points,
           player.season_name, player.past_fixtures_points, player.fixtures);
 
+        // console.log("HERE");
+        console.log(transformedTopPlayer);
         return transformedTopPlayer;
       })
       .catch((error: Response) => Observable.throw(error.json()));
@@ -70,19 +73,18 @@ export class PlayerService {
     return this.http.get('http://localhost:3000/api')
       .map((response: Response) => {
         const topInPlayers = response.json().topIn;
-        let transformedTopIn: Player[];
+        let transformedTopIn: Player[] = [];
 
         for(let player of topInPlayers) {
           transformedTopIn.push(new Player(player._id, player.name, player.position,
-            player.team, player.squad_number, player.img, player.cost,
-            player.selected_by_percent, player.form, player.transfer_out_event,
-            player.transfer_in_event, player.total_points, player.event_points,
-            player.ppg, player.goals_scored, player.assists, player.clean_sheets,
-            player.goals_conceded, player.ep_this, player.ep_next, player.influence,
-            player.creativity, player.ep.threat, player.ict_index, player.season_points,
-            player.season_name, player.past_fixtures_points, player.fixtures));
+          player.team, player.squad_number, player.img, player.cost,
+          player.selected_by_percent, player.form, player.transfer_out_event,
+          player.transfer_in_event, player.total_points, player.event_points,
+          player.ppg, player.goals_scored, player.assists, player.clean_sheets,
+          player.goals_conceded, player.ep_this, player.ep_next, player.influence,
+          player.creativity, player.threat, player.ict_index, player.season_points,
+          player.season_name, player.past_fixtures_points, player.fixtures));
         }
-        
 
         return transformedTopIn;
       })
@@ -93,19 +95,22 @@ export class PlayerService {
     return this.http.get('http://localhost:3000/api')
       .map((response: Response) => {
         const topOutPlayers = response.json().topOut;
-        let transformedTopOut: Player[];
+        let transformedTopOut: Player[] = [];
+
+        console.log(topOutPlayers);
 
         for(let player of topOutPlayers) {
           transformedTopOut.push(new Player(player._id, player.name, player.position,
-            player.team, player.squad_number, player.img, player.cost,
-            player.selected_by_percent, player.form, player.transfer_out_event,
-            player.transfer_in_event, player.total_points, player.event_points,
-            player.ppg, player.goals_scored, player.assists, player.clean_sheets,
-            player.goals_conceded, player.ep_this, player.ep_next, player.influence,
-            player.creativity, player.ep.threat, player.ict_index, player.season_points,
-            player.season_name, player.past_fixtures_points, player.fixtures));
+          player.team, player.squad_number, player.img, player.cost,
+          player.selected_by_percent, player.form, player.transfer_out_event,
+          player.transfer_in_event, player.total_points, player.event_points,
+          player.ppg, player.goals_scored, player.assists, player.clean_sheets,
+          player.goals_conceded, player.ep_this, player.ep_next, player.influence,
+          player.creativity, player.threat, player.ict_index, player.season_points,
+          player.season_name, player.past_fixtures_points, player.fixtures));
         }
         
+        console.log(transformedTopOut);
 
         return transformedTopOut;
       })
@@ -122,15 +127,16 @@ export class PlayerService {
         const topSelectedPlayers = response.json().topSelecteds;
         let transformedTopSelected: Player;
         let player = topSelectedPlayers[index];
+        console.log(player);
 
         transformedTopSelected = new Player(player._id, player.name, player.position,
-            player.team, player.squad_number, player.img, player.cost,
-            player.selected_by_percent, player.form, player.transfer_out_event,
-            player.transfer_in_event, player.total_points, player.event_points,
-            player.ppg, player.goals_scored, player.assists, player.clean_sheets,
-            player.goals_conceded, player.ep_this, player.ep_next, player.influence,
-            player.creativity, player.ep.threat, player.ict_index, player.season_points,
-            player.season_name, player.past_fixtures_points, player.fixtures);
+          player.team, player.squad_number, player.img, player.cost,
+          player.selected_by_percent, player.form, player.transfer_out_event,
+          player.transfer_in_event, player.total_points, player.event_points,
+          player.ppg, player.goals_scored, player.assists, player.clean_sheets,
+          player.goals_conceded, player.ep_this, player.ep_next, player.influence,
+          player.creativity, player.threat, player.ict_index, player.season_points,
+          player.season_name, player.past_fixtures_points, player.fixtures);
 
         return transformedTopSelected;
       })
@@ -140,11 +146,13 @@ export class PlayerService {
   getPlayersNameArray() {
     return this.http.get('http://localhost:3000/api')
       .map((response: Response) => {
-        const names = response.json().playersName;
+        const names = response.json().playerNames;
+        // console.log(names);
         let transformedNames: string[] = [];
         for (let playerName of names) {
-          transformedNames.push(playerName);
+          transformedNames.push(playerName.name);
         }
+        // console.log("After loop");
         this.playersName = transformedNames;
         return this.playersName;
       })
@@ -159,19 +167,22 @@ export class PlayerService {
 
         for(let player of allPlayers) {
           transformedPlayers.push(new Player(player._id, player.name, player.position,
-            player.team, player.squad_number, player.img, player.cost,
-            player.selected_by_percent, player.form, player.transfer_out_event,
-            player.transfer_in_event, player.total_points, player.event_points,
-            player.ppg, player.goals_scored, player.assists, player.clean_sheets,
-            player.goals_conceded, player.ep_this, player.ep_next, player.influence,
-            player.creativity, player.ep.threat, player.ict_index, player.season_points,
-            player.season_name, player.past_fixtures_points, player.fixtures));
+          player.team, player.squad_number, player.img, player.cost,
+          player.selected_by_percent, player.form, player.transfer_out_event,
+          player.transfer_in_event, player.total_points, player.event_points,
+          player.ppg, player.goals_scored, player.assists, player.clean_sheets,
+          player.goals_conceded, player.ep_this, player.ep_next, player.influence,
+          player.creativity, player.threat, player.ict_index, player.season_points,
+          player.season_name, player.past_fixtures_points, player.fixtures));
         }
         
 
         for(let player of transformedPlayers) {
-          if(player.name === name)
+          if(player.name === name) {
+            console.log("found");
+            console.log(player);
             return player;
+          }
         }
 
         return transformedPlayers[-1];
@@ -219,36 +230,36 @@ export class PlayerService {
   //     ["WAT", "SWA", "ARS", "MCI"]
   //  ),
 
-  //   new Player(
-  //     "2",
-  //     "Sadio Mane",
-  //     "MD",
-  //     "Liverpool",
-  //     19,
-  //     "https://platform-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p110979.png",
-  //     95,
-  //     25.7,
-  //     8.0,
-  //     5600,
-  //     192142,
-  //     50,
-  //     18,
-  //     9.7,
-  //     3,
-  //     2,
-  //     2,
-  //     5,
-  //     10.7,
-  //     12.7,
-  //     150.6,
-  //     90.4,
-  //     102.0,
-  //     35.1,
-  //     [180, 250, 310],
-  //     ["2014/15", "2015/16", "2016/17"],
-  //     [13, 14, 12],
-  //     ["WAT", "SWA", "ARS", "MCI"]
-  //  ),
+   //  new Player(
+   //    "2",
+   //    "Sadio Mane",
+   //    "MD",
+   //    "Liverpool",
+   //    19,
+   //    "https://platform-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p110979.png",
+   //    95,
+   //    25.7,
+   //    8.0,
+   //    5600,
+   //    192142,
+   //    50,
+   //    18,
+   //    9.7,
+   //    3,
+   //    2,
+   //    2,
+   //    5,
+   //    10.7,
+   //    12.7,
+   //    150.6,
+   //    90.4,
+   //    102.0,
+   //    35.1,
+   //    [180, 250, 310],
+   //    ["2014/15", "2015/16", "2016/17"],
+   //    [13, 14, 12],
+   //    ["WAT", "SWA", "ARS", "MCI"]
+   // ),
 
   //  new Player(
   //    "3",
