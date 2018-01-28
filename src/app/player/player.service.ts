@@ -163,29 +163,22 @@ export class PlayerService {
     return this.http.get('http://localhost:3000/api')
       .map((response: Response) => {
         const allPlayers = response.json().allPlayers;
-        let transformedPlayers: Player[];
+        let transformedPlayers: Player;
 
         for(let player of allPlayers) {
-          transformedPlayers.push(new Player(player._id, player.name, player.position,
-          player.team, player.squad_number, player.img, player.cost,
-          player.selected_by_percent, player.form, player.transfer_out_event,
-          player.transfer_in_event, player.total_points, player.event_points,
-          player.ppg, player.goals_scored, player.assists, player.clean_sheets,
-          player.goals_conceded, player.ep_this, player.ep_next, player.influence,
-          player.creativity, player.threat, player.ict_index, player.season_points,
-          player.season_name, player.past_fixtures_points, player.fixtures));
+          if(player.name === name){
+            transformedPlayers = new Player(player._id, player.name, player.position,
+            player.team, player.squad_number, player.img, player.cost,
+            player.selected_by_percent, player.form, player.transfer_out_event,
+            player.transfer_in_event, player.total_points, player.event_points,
+            player.ppg, player.goals_scored, player.assists, player.clean_sheets,
+            player.goals_conceded, player.ep_this, player.ep_next, player.influence,
+            player.creativity, player.threat, player.ict_index, player.season_points,
+            player.season_name, player.past_fixtures_points, player.fixtures);
+          }       
         }
         
-
-        for(let player of transformedPlayers) {
-          if(player.name === name) {
-            console.log("found");
-            console.log(player);
-            return player;
-          }
-        }
-
-        return transformedPlayers[-1];
+        return transformedPlayers;
       })
       .catch((error: Response) => Observable.throw(error.json()));
   }

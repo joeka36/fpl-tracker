@@ -1,4 +1,4 @@
-<div class="graph" style="display: block">
+<div class="graph" style="display: block" *ngIf="selectedPlayer">
   <canvas baseChart height="400" 
                 [datasets]="lineChartData"
                 [labels]="lineChartLabels"

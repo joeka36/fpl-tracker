@@ -40,6 +40,8 @@
   border-bottom: 3px solid black;
   border-right: 3px solid black;
   border-left: 3px solid black;
+  padding: 0;
+
 }
 
 .player-position p {
@@ -53,6 +55,7 @@
 .player-ppg {
   border-top: 3px solid black;
   border-bottom: 3px solid black;
+  padding: 0;
 }
 
 .player-ppg p {
@@ -73,6 +76,7 @@
   border-top: 3px solid black;
   border-bottom: 3px solid black;
   border-left: 3px solid black;
+  padding: 0;
 }
 
 .player-predicted p {

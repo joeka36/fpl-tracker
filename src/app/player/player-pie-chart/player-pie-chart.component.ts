@@ -12,22 +12,29 @@ export class PlayerPieChartComponent implements OnInit {
   constructor(public playerService:PlayerService) { }
 
   ngOnInit() {
-    this.selectedPlayer = this.playerService.getPlayerByIndex(this.playerID - 1);
+    this.playerService.getPlayerByID(this.playerID)
+      .subscribe(
+         (player:Player) => {
+           this.selectedPlayer = player;
 
-    if (this.type == 0) {
-      this.pieChartData = [this.selectedPlayer.selected_by_percent, (100 - this.selectedPlayer.selected_by_percent)];
-      this.pieChartLabels =  ['Selected', 'Not Selected'];
-    }
+           if (this.type == 0) {
+              this.pieChartData = [this.selectedPlayer.selected_by_percent, (100 - this.selectedPlayer.selected_by_percent)];
+              this.pieChartLabels =  ['Selected', 'Not Selected'];
+            }
 
-    else if (this.type == 1) {
-      this.pieChartData = [this.selectedPlayer.transfer_in_event, this.selectedPlayer.transfer_out_event];
-      this.pieChartLabels = ["Transfer In", "Transfer Out"];
-    }
+            else if (this.type == 1) {
+              this.pieChartData = [this.selectedPlayer.transfer_in_event, this.selectedPlayer.transfer_out_event];
+              this.pieChartLabels = ["Transfer In", "Transfer Out"];
+            }
 
-    else if (this.type == 2) {
-      this.pieChartData = [this.selectedPlayer.goals_scored, this.selectedPlayer.assists];
-      this.pieChartLabels = ["Goals", "Assists"]
-    }
+            else if (this.type == 2) {
+              this.pieChartData = [this.selectedPlayer.goals_scored, this.selectedPlayer.assists];
+              this.pieChartLabels = ["Goals", "Assists"]
+            }
+         }
+       );
+
+            
 
   }
 

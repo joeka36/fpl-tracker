@@ -62,32 +62,7 @@ export class PlayerComponent implements OnInit {
         }
        );
     // this.selectedPlayer = this.playerService.getPlayerByID(this.playerID);
-    // console.log(this.playersName[1]);
-  }
-
-  ngDoCheck(){
-    this.route.params
-      .subscribe(
-        (params: Params) => {
-          this.playerID = params['id'];
-        }
-      );
-
-    this.playerService.getPlayersNameArray()
-    .subscribe(
-        (playerNames: string[]) => {
-          this.playersName = playerNames;
-        }
-      );
-
-    this.playerService.getPlayerByID(this.playerID)
-      .subscribe(
-        (player: Player) => {
-          this.selectedPlayer = player;
-        }
-       );
-      
-    // this.selectedPlayer = this.playerService.getPlayerByID(this.playerID);
+    console.log(this.playerID);
   }
 
   public onSelected(selected: CompleterItem) {
@@ -97,10 +72,13 @@ export class PlayerComponent implements OnInit {
         .subscribe(
           (searchPlayer: Player) => {
             this.searchPlayer = searchPlayer;
+            this.router.navigateByUrl('/index').then(
+              () => {
+              this.router.navigate(['player', this.searchPlayer.playerID]);
+           });
           }
          );
         // console.log(this.searchPlayer.playerID);
-        this.router.navigate(['player', this.searchPlayer.playerID]);
       } 
  }
 

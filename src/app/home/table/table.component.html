@@ -13,10 +13,10 @@
         <tbody>
           <tr *ngFor="let player of transferPlayersIn; let i=index">
             <th scope="row">{{ i + 1 }}</th>
-            <td>{{ player.name }}</td>
-            <td>{{ player.team }}</td>
-            <td>{{ player.position }}</td>
-            <td>{{ player.transfer_in_event }}</td>
+            <td>{{ player?.name }}</td>
+            <td>{{ player?.team }}</td>
+            <td>{{ player?.position }}</td>
+            <td>{{ player?.transfer_in_event }}</td>
           </tr>
         </tbody>
       </table>
@@ -36,10 +36,10 @@
         <tbody>
           <tr *ngFor="let player of transferPlayersOut; let i=index">
             <th scope="row">{{ i + 1 }}</th>
-            <td>{{ player.name }}</td>
-            <td>{{ player.team }}</td>
-            <td>{{ player.position }}</td>
-            <td>{{ player.transfer_out_event }}</td>
+            <td>{{ player?.name }}</td>
+            <td>{{ player?.team }}</td>
+            <td>{{ player?.position }}</td>
+            <td>{{ player?.transfer_out_event }}</td>
           </tr>
         </tbody>
       </table>

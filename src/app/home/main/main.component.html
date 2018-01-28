@@ -13,25 +13,25 @@
 <div class="container">
   <div class="row">
   <div class="col-lg-4 player-display">
-    <img [src]="bestPlayer.img_ref">
+    <img [src]="bestPlayer?.img_ref">
   </div>
   <div class="col-lg-2 player-name">
      <div class="container">
-      <p>{{ bestPlayer.name }}</p>
+      <p>{{ bestPlayer?.name }}</p>
     </div>
   </div>
   <div class="col-lg-2 player-position">
     <div class="container">
-      <p>{{ bestPlayer.position }}</p>
+      <p>{{ bestPlayer?.position }}</p>
     </div>
   </div>
   <div class="col-lg-2 player-ppg">
     <div class="container">
-      <p>{{ bestPlayer.ppg }}<span id="ppg">ppg</span></p>
+      <p>{{ bestPlayer?.ppg }}<span id="ppg">ppg</span></p>
     </div>
   </div>
   <div class="col-lg-2 player-predicted">
-    <p>{{ bestPlayer.ep_this }}</p>
+    <p>{{ bestPlayer?.ep_this }}</p>
     <p id="pred">PREDICTED POINTS</p>
   </div>
 </div>

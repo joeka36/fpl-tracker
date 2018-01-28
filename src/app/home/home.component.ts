@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   protected searchStr: string;
   protected player: string;
   protected dataService: CompleterData;
-  protected searchPlayer: Player;
+  protected searchPlayerID: string;
   protected players:Player[] = [];
   protected playersName:string[];
 
@@ -34,16 +34,21 @@ export class HomeComponent implements OnInit {
 
   public onSelected(selected: CompleterItem) {
     if (selected) {
+      // console.log(selected.title);
         this.playerService.getPlayerByName(selected.title)
         .subscribe(
           (searchPlayer: Player) => {
-            this.searchPlayer = searchPlayer;
+            // console.log(searchPlayer);
+            this.searchPlayerID = searchPlayer.playerID;
+            console.log(this.searchPlayerID);
+            this.router.navigate(['player', this.searchPlayerID]);
           }
         );
 
         // this.searchPlayer = this.playerService.getPlayerByName(selected.title);
-        // console.log(this.searchPlayer.playerID);
-        this.router.navigate(['player', this.searchPlayer.playerID]);
+        console.log(this.searchPlayerID);
+        
+        // this.router.navigate(['player', 1]);
       } 
   }
 }

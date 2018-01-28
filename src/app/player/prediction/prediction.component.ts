@@ -8,28 +8,47 @@ import { PlayerService } from '../../player/player.service';
   templateUrl: './prediction.component.html',
   styleUrls: ['./prediction.component.css']
 })
-export class PredictionComponent implements OnInit {
+export class PredictionComponent implements OnInit{
 
   constructor(private playerService:PlayerService) { }
 
   ngOnInit() {
-    this.selectedPlayer = this.playerService.getPlayerByIndex(this.index - 1);
+   if(this.option == 0) {
+     this.lineChartData = [{data:[], label: 'Fantasy Points'}];
+     this.lineChartLabels = [];
+   }
+          
+  else {
+    this.lineChartData = [{data:[], label: 'Fantasy Points'}];
+    this.lineChartLabels = [];
+  } 
 
-    if(this.option == 0) {
-      this.pastPoints = this.selectedPlayer.past_fixtures_points;
-      this.pastPoints.push(this.selectedPlayer.ep_this);
-      this.fixtures = this.selectedPlayer.fixtures;
-      this.lineChartData = [{data: this.pastPoints, label: 'Fantasy Points'}];
-      this.lineChartLabels = this.fixtures;
-    }
-    
-    else {
-      this.pastPoints = this.selectedPlayer.season_points;
-      this.fixtures = this.selectedPlayer.season_name;
-      this.lineChartData = [{data:this.pastPoints, label: 'Fantasy Points'}];
-      this.lineChartLabels = this.fixtures;
-    } 
+    this.playerService.getPlayerByID(this.index)
+      .subscribe(
+         (player:Player) => {
+           this.selectedPlayer = player;
+           console.log(this.selectedPlayer);
+
+           if(this.option == 0) {
+            this.pastPoints = this.selectedPlayer.past_fixtures_points;
+            this.pastPoints.push(this.selectedPlayer.ep_this);
+            this.pastPoints.push(this.selectedPlayer.ep_next)
+            this.fixtures = this.selectedPlayer.fixtures;
+            this.lineChartData = [{data: this.pastPoints, label: 'Fantasy Points'}];
+            console.log(this.lineChartData);
+            this.lineChartLabels = this.fixtures;
+          }
+          
+          else {
+            this.pastPoints = this.selectedPlayer.season_points;
+            this.fixtures = this.selectedPlayer.season_name;
+            this.lineChartData = [{data:this.pastPoints, label: 'Fantasy Points'}];
+            this.lineChartLabels = this.fixtures;
+          } 
+         }
+       );          
   }
+
 
   @Input() index;
   @Input() option;

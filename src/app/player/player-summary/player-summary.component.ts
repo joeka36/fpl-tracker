@@ -1,4 +1,4 @@
-import { Component, OnInit, DoCheck } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 
 import { PlayerService } from '../player.service';
@@ -8,7 +8,7 @@ import { Player } from '../player.model';
   templateUrl: './player-summary.component.html',
   styleUrls: ['./player-summary.component.css']
 })
-export class PlayerSummaryComponent implements OnInit {
+export class PlayerSummaryComponent implements OnInit, OnChanges {
 
   protected selectedPlayer: Player;
   protected playerID: string;
@@ -33,7 +33,7 @@ export class PlayerSummaryComponent implements OnInit {
     // console.log(this.playersName[1]);
   }
 
-  ngDoCheck(){
+  ngOnChanges(){
     this.route.params
       .subscribe(
         (params: Params) => {

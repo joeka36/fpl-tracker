@@ -13,15 +13,16 @@ export class PlayerRadarComponent implements OnInit {
   constructor(private playerService:PlayerService) { }
 
   ngOnInit() {
-    this.selectedPlayer = this.playerService.getPlayerByIndex(this.index - 1);
-    console.log(this.selectedPlayer);
-    this.radarChartData = [{data: [this.selectedPlayer.influence,
-      this.selectedPlayer.creativity, this.selectedPlayer.threat,
-      this.selectedPlayer.ict_index
-    ], label: 'Player Info'}];
-    this.radarChartLabels = ['Influence', 'Creativity', 'Threat', 'ICT Average'];
-    console.log(this.radarChartData);
-    console.log(this.radarChartLabels);
+    this.playerService.getPlayerByID(this.index)
+      .subscribe(
+         (player:Player) => {
+           this.selectedPlayer = player;
+           this.radarChartData = [{data: [this.selectedPlayer.influence,
+                                   this.selectedPlayer.creativity, this.selectedPlayer.threat, this.selectedPlayer.ict_index
+                                 ], label: 'Player Info'}];
+           this.radarChartLabels = ['Influence', 'Creativity', 'Threat', 'ICT Average'];
+         }
+       );
   }
 
   @Input() index;
