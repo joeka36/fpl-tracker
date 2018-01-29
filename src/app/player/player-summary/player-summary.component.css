@@ -10,6 +10,10 @@
   margin-top: 20px;
 }
 
+.header strong {
+  padding-left: 2%;
+}
+
 .header p {
   color: white;
   margin-bottom: 0px;

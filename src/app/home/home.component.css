@@ -13,9 +13,9 @@
 }
 
 :host >>> .completer-dropdown {
-    width: 68.0% !important;
+    width: 60.0% !important;
     opacity: 0.9;
-    margin-left: 14.7%;
+    margin-left: 12.7%;
     /*margin: 0 auto;*/
 /*    overflow-y: auto;
     overflow-x: hidden;
@@ -31,7 +31,7 @@
 }
 
 :host >>> .completer-selected-row {
-  .width: 70% !important;
+  .width: 57% !important;
 }
 
 .container p {

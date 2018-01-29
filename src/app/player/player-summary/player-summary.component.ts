@@ -10,8 +10,8 @@ import { Player } from '../player.model';
 })
 export class PlayerSummaryComponent implements OnInit, OnChanges {
 
-  protected selectedPlayer: Player;
-  protected playerID: string;
+  selectedPlayer: Player;
+  playerID: string;
 
   constructor(private route: ActivatedRoute, private router: Router, private playerService:PlayerService) {}
 

@@ -12,14 +12,14 @@ import { Player } from './player.model';
 })
 export class PlayerComponent implements OnInit {
 
-  protected searchStr: string;
-  protected player: string;
-  protected dataService: CompleterData;
-  protected searchPlayer: Player;
-  protected players:Player[] = [];
-  protected playersName:string[];
-  protected selectedPlayer: Player;
-  protected playerID: string;
+  searchStr: string;
+  player: string;
+  dataService: CompleterData;
+  searchPlayer: Player;
+  players:Player[] = [];
+  playersName:string[];
+  selectedPlayer: Player;
+  playerID: string;
 
   public chartColorsOne: any[] = [
       { 

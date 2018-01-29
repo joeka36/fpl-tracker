@@ -11,12 +11,12 @@ import { Player } from '../player/player.model';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  protected searchStr: string;
-  protected player: string;
-  protected dataService: CompleterData;
-  protected searchPlayerID: string;
-  protected players:Player[] = [];
-  protected playersName:string[];
+  searchStr: string;
+  player: string;
+  dataService: CompleterData;
+  searchPlayerID: string;
+  players:Player[] = [];
+  playersName:string[];
 
   constructor(private route: ActivatedRoute, private router: Router, private playerService:PlayerService) {}
 
