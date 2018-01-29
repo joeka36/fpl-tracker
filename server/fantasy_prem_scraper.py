@@ -125,7 +125,7 @@ for element in tqdm(allPlayers["elements"]):
         past_fixtures_points.append(games["total_points"])
         clubName = playerToClubMapping[games["opponent_team"]]
         # print(idToClubMapping[games["opponent_team"]])
-        fixtures.append(clubName[1])
+        fixtures.append(clubName)
 
     for fixture in playerInfo['fixtures']:
         if(count > 1):

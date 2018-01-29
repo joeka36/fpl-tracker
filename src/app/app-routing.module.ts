@@ -9,7 +9,7 @@ const appRoutes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
   {path: 'player/:id', component: PlayerComponent},
   { path: 'not-found', component: ErrorComponent},
-  { path: '**', redirectTo: '/not-found', pathMatch: 'full'},
+  { path: '**', redirectTo: '/', pathMatch: 'full'},
 ];
 
 @NgModule({
