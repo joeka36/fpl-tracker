@@ -5,3 +5,7 @@
 .fa-arrow-down {
   color: red;
 }
+
+.table td {
+  padding: 0.4rem;
+}

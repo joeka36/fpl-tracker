@@ -115,3 +115,17 @@
 /*.side-separator {
   border-right: 3px solid #37003C;
 }*/
+
+@media only screen and (max-width: 1023px) {
+  #name {
+    font-size: 1.3rem;
+    opacity: 0.8;
+    margin-bottom: 5%;
+  }
+
+  #tagline {
+    font-size: 1rem;
+    color: white;
+    text-shadow: 2px 2px 8px black;
+  }
+}

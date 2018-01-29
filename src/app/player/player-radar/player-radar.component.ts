@@ -18,9 +18,10 @@ export class PlayerRadarComponent implements OnInit {
          (player:Player) => {
            this.selectedPlayer = player;
            this.radarChartData = [{data: [this.selectedPlayer.influence,
-                                   this.selectedPlayer.creativity, this.selectedPlayer.threat, this.selectedPlayer.ict_index
+                                   this.selectedPlayer.creativity, this.selectedPlayer.threat, 
+                                   this.selectedPlayer.ict_index
                                  ], label: 'Player Info'}];
-           this.radarChartLabels = ['Influence', 'Creativity', 'Threat', 'ICT Average'];
+           this.radarChartLabels = ['Influence', 'Creativity', 'Threat', 'ICT Index'];
          }
        );
   }

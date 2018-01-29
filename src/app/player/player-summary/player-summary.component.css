@@ -145,3 +145,13 @@ img {
 /*  margin-left: 15px;*/
   text-align: center;
 }
+
+@media only screen and (max-width: 1023px) {
+  img {
+    height: 280px;
+    width: 280px;
+    margin: 0 auto;
+    display: block;
+    padding-top: 15px;
+  }
+}

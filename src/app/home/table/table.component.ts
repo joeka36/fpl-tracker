@@ -68,4 +68,20 @@ export class TableComponent implements OnInit, OnChanges {
     // this.transferPlayersIn = this.playerService.getTopTransfersIn();
     // this.transferPlayersOut = this.playerService.getTopTransfersOut();
   }
+
+  convertPosition(position:String) {
+    console.log(position);
+    
+    if(position === "Forward")
+      return "FWD";
+
+    else if (position === "Midfielder")
+      return "MD";
+
+    else if (position === "Defender")
+      return "DEF";
+
+    else
+      return "GK";
+  }
 }
