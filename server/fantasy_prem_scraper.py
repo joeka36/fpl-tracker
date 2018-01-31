@@ -73,8 +73,11 @@ elementToPositionMapping = {
 }
 
 #Connect to mongodb
-client = MongoClient('localhost', 27017)
-db = client.fantasy_premier_league
+# client = MongoClient('localhost', 27017)
+mongodb_uri =  "mongodb://joeka36:GFCcpLBJ36@localhost:27017/fantasy_premier_league?authSource=admin"
+client = MongoClient(mongodb_uri)
+db = client["fantasy_premier_league"]
+db.authenticate("joeka36", "GFCcpLBJ36")
 playersCollection = db.players
 
 #Get all players data summary

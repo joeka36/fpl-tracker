@@ -15,13 +15,13 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // Set up database with mongoose
-mongoose.connect('mongodb://localhost/fantasy_premier_league');
+mongoose.connect('mongodb://localhost:27017/fantasy_premier_league');
 
 app.use('/api', appRoute);
 
 // Catch all other routes and return the index file
 app.get('*', (req, res) => {
-  console.log(path.join(__dirname, 'dist/index.html'));
+  // console.log(path.join(__dirname, 'dist/index.html'));
   res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
