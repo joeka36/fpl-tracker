@@ -15,7 +15,8 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // Set up database with mongoose
-mongoose.connect('mongodb://localhost:27017/fantasy_premier_league');
+// mongoose.connect('mongodb://localhost:27017/fantasy_premier_league');
+mongoose.connect('mongodb://joeka36:GFCcpLBJ36@ec2-34-227-10-43.compute-1.amazonaws.com:27017/fantasy_premier_league')
 
 app.use('/api', appRoute);
 
