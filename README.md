@@ -1,28 +1,8 @@
-# FplTracker
+# Fantasy Premier League Tracker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.1.
+A site which visualize the performance of Premier League Footballers for the official Fantasy Premier League site. Visit http://www.fantasypltracker.com/ to check the project out.
 
-## Development server
+## Development
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Site was created using Angular as the frontend framework and NodeJS as the backend. The data are scraped on a weekly basis using a custom Python script.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
